@@ -4,13 +4,15 @@
 #
 Name     : R-subselect
 Version  : 0.14
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/subselect_0.14.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/subselect_0.14.tar.gz
 Summary  : Selecting Variable Subsets
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-subselect-lib = %{version}-%{release}
+Requires: R-ISwR
+Requires: R-corpcor
 BuildRequires : R-ISwR
 BuildRequires : R-corpcor
 BuildRequires : buildreq-R
@@ -34,13 +36,13 @@ lib components for the R-subselect package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552953270
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1569375657
 
 %install
-export SOURCE_DATE_EPOCH=1552953270
+export SOURCE_DATE_EPOCH=1569375657
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,12 +71,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  subselect || :
+R CMD check --no-manual --no-examples --no-codoc subselect || :
 
 
 %files
