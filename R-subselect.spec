@@ -4,7 +4,7 @@
 #
 Name     : R-subselect
 Version  : 0.15.2
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/subselect_0.15.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/subselect_0.15.2.tar.gz
 Summary  : Selecting Variable Subsets
