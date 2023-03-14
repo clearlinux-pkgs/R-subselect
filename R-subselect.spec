@@ -4,7 +4,7 @@
 #
 Name     : R-subselect
 Version  : 0.15.4
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/subselect_0.15.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/subselect_0.15.4.tar.gz
 Summary  : Selecting Variable Subsets
@@ -16,9 +16,6 @@ Requires: R-corpcor
 BuildRequires : R-ISwR
 BuildRequires : R-corpcor
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 Package 'subselect' requires the Fortran LAPACK library. As of version
@@ -41,10 +38,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673292888
+export SOURCE_DATE_EPOCH=1678830603
 
 %install
-export SOURCE_DATE_EPOCH=1673292888
+export SOURCE_DATE_EPOCH=1678830603
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
