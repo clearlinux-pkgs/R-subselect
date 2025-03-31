@@ -1,5 +1,5 @@
 PKG_NAME := R-subselect
-URL = https://cran.r-project.org/src/contrib/subselect_0.15.5.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/subselect_0.16.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
